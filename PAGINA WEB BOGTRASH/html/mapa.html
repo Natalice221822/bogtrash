@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+        <meta name="viewport"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BOGTRASH</title>
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto" rel="stylesheet"/>
+		<link rel='stylesheet' type='text/css' href='../css/default.css' media='screen'/>
+        <link rel='stylesheet' type='text/css' href='../css/map.css' media='screen'/>
+		<link rel="shortcut icon" href='../images/favicon.ico' type="image/x-icon">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      
+        		
+ 	</head>
+    
+<header align="center">
+    <img src="../imagenes/id.png" alt="bogtrash" style="align-content: right;width: 280px; height: 100px;"
+                >
+    <img src="../imagenes/logoUD.png" alt="logo" style="align-content: left;width: 180px; height: 70px;"
+                >
+            
+    </header>
+     <div class="w3-bar w3-black">
+  <a href="../html/index.html" class="w3-bar-item w3-button w3-mobile w3-gray">Inicio</a>
+  <a href="#" class="w3-bar-item w3-button w3-mobile">¿Qué es Bogtrash?</a>
+  <a href="https://drive.google.com/file/d/1K0yQV8F9WzEUDagN2Y9l5uWb5Ts41WJU/view?usp=sharing" class="w3-bar-item w3-button w3-mobile">Descarga la App</a>
+  <div class="w3-dropdown-hover w3-mobile">
+    <button class="w3-button">Datos Abiertos<i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+      <a href="https://www.google.com/fusiontables/DataSource?docid=1MjlXb63dyBw0IuKXjnnin2q4o4GLaBPySGkrWjeZ" class="w3-bar-item w3-button w3-mobile">Puntos Críticos-UAESP</a>
+      <a href="https://www.google.com/fusiontables/DataSource?docid=1Gujbhbec_qmbCK8sKIhxiErdog_bsrNJz9bPyBOr" class="w3-bar-item w3-button w3-mobile">Puntos Críticos  Reporte Ciudadano</a>
+      <a href="https://drive.google.com/open?id=1jFeQPO_j5rDLy1ZEs7bWpvij4Ed0NrySvADn1qBy" class="w3-bar-item w3-button w3-mobile">Puntos de Posconsumo</a>
+    </div>
+  </div>
+</div>
+    
+    <body>
+    <div id="amarillo"  ></div>
+        <div id="rojo" > </div> 
+        <script></script>
+        
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=visualization&amp;key=AIzaSyDS14s2Wsncf8wjZ5t39oG101eayFuPZqU&amp;unused-google-fusiontables"></script>
+        
+    
+<script type="text/javascript">
+  function initialize() {
+    var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
+      (navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
+    if (isMobile) {
+      var viewport = document.querySelector("meta[name=viewport]");
+      viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
+    }
+    var mapDiv = document.getElementById('googft-mapCanvas');
+    mapDiv.style.width = isMobile ? '100%' : '1922px';
+    mapDiv.style.height = isMobile ? '100%' : '800px';
+    var map = new google.maps.Map(mapDiv, {
+      center: new google.maps.LatLng(4.766956145307758, -74.03755187988281),
+      mapTypeControl: true,
+    zoomControl: true,
+      scaleControl: true,
+      streetViewControl: true, 
+      rotateControl: true,
+      fullscreenControl: true,
+    
+      zoom: 15,
+    
+        styles: [
+            {elementType: 'geometry', stylers: [{color: '#212121'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#212121'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#a50347'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f7f4f4'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#c10bb5'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#00FF00'}]
+            },
+            {
+              featureType: 'landscape.natural',
+              elementType: 'geometry',
+              stylers: [{"color": "#006a00"},
+            {
+              saturation: -45
+            },
+            {
+              lightness: -85
+            },
+            {
+              visibility: "simplified"
+            }
+            ]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#373737'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#8a8a8a'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#3c3c3c'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f7f9f9'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#4af7e3'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#52d3d3'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#4af7e3'}]
+            }
+
+          ]
+      
+    });
+    
+    
+    map.controls[google.maps.ControlPosition['RIGHT_BOTTOM']].push(document.getElementById('googft-legend-open'));
+    map.controls[google.maps.ControlPosition['RIGHT_BOTTOM']].push(document.getElementById('googft-legend'));
+
+    layer = new google.maps.FusionTablesLayer({
+      map: map,
+      heatmap: { enabled: false },
+      query: {
+        select: "col12",
+        from: "1Gujbhbec_qmbCK8sKIhxiErdog_bsrNJz9bPyBOr",
+        where: ""
+      },
+      options: {
+        styleId: 2,
+        templateId: 2
+      }
+    });
+      
+       layer2 = new google.maps.FusionTablesLayer({
+      map: map,
+      heatmap: { enabled: false },
+      query: {
+        select: "col8",
+        from: "1jFeQPO_j5rDLy1ZEs7bWpvij4Ed0NrySvADn1qBy",
+        where: ""
+      },
+      options: {
+        styleId: 2,
+        templateId: 2
+      }
+    });
+    
+    layer3 = new google.maps.FusionTablesLayer({
+      map: map,
+      heatmap: { enabled: false },
+      query: {
+        select: "col36",
+        from: "1MjlXb63dyBw0IuKXjnnin2q4o4GLaBPySGkrWjeZ",
+        where: ""
+      },
+      options: {
+        styleId: 2,
+        templateId: 2
+      }
+    });
+      
+      
+
+    if (isMobile) {
+      var legend = document.getElementById('googft-legend');
+      var legendOpenButton = document.getElementById('googft-legend-open');
+      var legendCloseButton = document.getElementById('googft-legend-close');
+      legend.style.display = 'none';
+      legendOpenButton.style.display = 'block';
+      legendCloseButton.style.display = 'block';
+      legendOpenButton.onclick = function() {
+        legend.style.display = 'block';
+        legendOpenButton.style.display = 'none';
+      }
+      legendCloseButton.onclick = function() {
+        legend.style.display = 'none';
+        legendOpenButton.style.display = 'block';
+      }
+    }
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS14s2Wsncf8wjZ5t39oG101eayFuPZqU&callback=initMap"
+    async defer></script>
+        
+<body>
+  <div id="googft-mapCanvas"></div>
+</body>
+<html/>
