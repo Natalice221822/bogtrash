@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BOGTRASH</title>
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto" rel="stylesheet"/>
+		<link rel='stylesheet' type='text/css' href='../css/default.css' media='screen'/>
+		<link rel="shortcut icon" href='../images/favicon.ico' type="image/x-icon">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+      
+        		
+ 	</head>
+    
+<header align="center">
+    <img src="../imagenes/id.png" alt="bogtrash" style="align-content: right;width: 280px; height: 100px;"
+                >
+    <img src="../imagenes/logoUD.png" alt="logo" style="align-content: left;width: 180px; height: 70px;"
+                >
+        <div id="amarillo"  ></div>
+        <div id="rojo" > </div>       
+    </header>
+<body>
+    <div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibmF0YWxpY2VsdW5hY3kiLCJhIjoiY2p1dGF4dDExMDYzbzN6cWlzd2V0ODhxciJ9.XYlOpsqReOUVKJgl3vso4Q';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+</script>
+    </body>

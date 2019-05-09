@@ -1,0 +1,244 @@
+body{
+	
+	background-color:black;
+	text-align: justify;
+	font-size: 10px;
+	margin:0em;
+	line-height: 1.4;
+	font-family: Roboto, sans-serif;
+	}
+#amarillo{
+    
+	padding:5px;
+    width:100%;
+	background-color:yellow;/*Negro*/
+	line-height:100%;
+	
+	 
+}
+
+#rojo{
+    
+	padding:5px;
+	background-color:red;
+	font-family: Fjalla One, sans-serif;
+	font-size: 40px;
+	font-weight:bold;
+	line-height:100%;
+	background-size: 100%;
+	 
+}
+
+nav{
+    background-color:#000000;/
+    list-style:none;
+    margin:0 px 0 10px;
+    padding:0;
+    
+}
+
+nav ul{
+    background-color:#000000;/
+    list-style:none;
+    margin:0 px 0 10px;
+    padding:0;
+}
+nav ul li{
+   
+    
+    float:left;
+    background-color:#000000;/*Negro*/
+    font-family:Fjalla One, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    margin-right:10px;
+    text-align:center;
+    
+}
+nav ul li:hover{
+    
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), to( #000000));
+   
+}
+nav ul li a{
+    color:#000000;
+    display:block;
+    padding:10px;
+   
+}
+header {	
+	color: #b3bca9;
+	padding:5px;
+	background-color:#000;/*Negro*/
+	font-family: Fjalla One, sans-serif;
+	font-size: 40px;
+	font-weight:bold;
+	text-align:	center;
+	line-height:100%;
+	background-size: 100%;
+	
+	}
+
+.carousel-inner img {
+    width: 80%;
+    height: 80%;
+    
+}
+
+.carousel-item img {
+    width: 80%;
+    height: 80%;
+}
+
+
+article {	
+	color: #69ba37;
+	padding:15px;
+	display:block;
+	background-color:#bbe25f;
+	font-family: Fjalla One, sans-serif;
+	font-size: 30px;
+	font-weight:bold;
+	text-align:	center;
+	line-height: 1.4;
+	margin:0px 10px 0px;
+	background-size: 100%;
+	}
+section {
+	
+	color: #bbe25f;
+	font-family: Roboto, sans-serif;
+	font-size: 15px;
+	text-align:	justify;
+	line-height: 1.6;
+	padding:0.3em;
+	margin-left: 20px;
+	
+	
+}
+
+p{
+		
+	font-size: 15px;
+	font-weight:italic;
+	margin:1em 0em;
+    color:#ffffff;
+	background-color: #000000;
+	font-weight:italic;
+	font-family: Fjalla One, sans-serif;
+	font-size: 100%;
+	text-align:left;
+	
+	
+
+}
+
+h1{
+	color:#ffffff;
+	background-color: #000000;
+	font-weight:italic;
+	font-family: Fjalla One, sans-serif;
+	font-size: 100%;
+	text-align:left;
+	
+	
+}
+ul{
+	color:#b3bca9;
+	font-family:Roboto, sans-serif;
+	font-size: 15px;
+	font-weight:italic;
+	margin:1em 0em;
+	
+	
+}
+h2 {
+	background-color:#20721c;
+	color:#b3bca9;
+	font-family: Roboto, sans-serif;
+	font-size: 20px;
+	font-weight:bold;
+	margin:1em 0em;
+	padding:7px;
+	text-shadow: 0px 1px 0px #FFF;
+    
+}
+
+
+.logo-ud {
+    width:1%
+    
+        
+}
+
+.carousel-inner {
+    width: 30%
+}
+
+.btnn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 12px;
+    font-family: Fjalla One, sans-serif
+
+  
+ }
+
+.btnn-danger{
+    color:#fff;
+    background-color: red;
+    border-color: red;
+}
+
+.navbar-btnn {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+button {
+ background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.navvbar-brand {
+    float:left;
+    height:50px;
+    padding:15px 15px;
+    font-size:18px;
+    line-height:20px;
+    background-color: #000000
+
+}
+
+.containers {
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto;
+    background-color: black;
+}
